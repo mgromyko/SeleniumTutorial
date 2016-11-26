@@ -6,6 +6,7 @@ public class InterfaceDemo1 {
 		CarsInterface myInterface = new CarsInterface() {
 		myInterface.engineStart("6 Cyl", true);
 		}
+
 	}
 
 }
