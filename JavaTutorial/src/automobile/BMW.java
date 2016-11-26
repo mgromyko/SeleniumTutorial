@@ -17,6 +17,8 @@ public class BMW extends Cars {
 		System.out.println("BMW Specific Functionality");
 	}
 	
+	//note2
+	
 	public void stop() {
 		Cars c1 = new Cars();
 		c1.decreaseSpeed();

@@ -23,6 +23,8 @@ public class Cars {
 		this.privateSpeed = pSpeed;
 	}
 
+	
+	//note
 	public Cars (int startSpeed) {
 		this.privateSpeed = startSpeed;
 	}

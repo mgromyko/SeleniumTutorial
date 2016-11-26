@@ -11,6 +11,8 @@ public class InheritanceDemo {
 		
 		Cars bmw1 = new Cars(speed);
 		bmw1.increaseSpeed();
+		
+		//note
 	}
 
 }

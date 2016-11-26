@@ -7,6 +7,8 @@ public class Honda extends Cars {
 		protectedSpeed = 10;
 		c1.setPrivateSpeed(10);
 		
+		//note
+		
 	}
 
 }
