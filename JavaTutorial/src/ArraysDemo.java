@@ -4,6 +4,8 @@ public class ArraysDemo {
 	
 	public static void main(String[] args) {
 		
+		
+		//this is a test note
 		int[] myIntArray1 = {100, 90};
 		/*myIntArray1 = new int[10];
 		
