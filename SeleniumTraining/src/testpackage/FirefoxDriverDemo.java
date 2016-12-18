@@ -14,7 +14,6 @@ public class FirefoxDriverDemo {
 		System.setProperty("webdriver.gecko.driver", pathToGecko2);
 		driver = new FirefoxDriver();
 		String baseURL = "http://www.google.com";
-		
 		driver.get(baseURL);
 		
 		//this is a test comment  for git
