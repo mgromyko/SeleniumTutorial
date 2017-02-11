@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SelectorsDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 //		WebDriver driver = new FirefoxDriver(); there's a bug with direction in FF.
 		WebDriver driver = new ChromeDriver();
