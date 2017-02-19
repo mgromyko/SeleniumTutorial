@@ -11,7 +11,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ListOfElements {
 	private WebDriver driver;
@@ -19,7 +21,7 @@ public class ListOfElements {
 
 	@Before
 	public void setUp() throws Exception {
-		driver = new FirefoxDriver();
+		driver = new InternetExplorerDriver();
 		baseURL = "http://letskodeit.teachable.com/pages/practice";
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
