@@ -2,43 +2,38 @@ package testpackage;
 
 import static org.junit.Assert.*;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import testpackage.GenericMethodsOld;
 
-public class IsElementPresentDemo {
+public class ImplicitWaitDemo {
 	private WebDriver driver;
 	private String baseUrl; 
-	private GenericMethods gm;
 
 	@Before
 	public void setUp() throws Exception {
 		driver = new ChromeDriver();
-		baseUrl = "http://letskodeit.teachable.com/pages/practice";
-		gm = new GenericMethods(driver);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		baseUrl = "https://letskodeit.teachable.com/pages/practice";
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	}
 	
 	@Test
 	public void test() {
 		driver.get(baseUrl);
+		driver.findElement(By.linkText("Login")).click();
 		
-		List<WebElement> elementList = gm.getElementList("//input[@type='text']", "xpath");
-		int size = elementList.size();
-		System.out.println("Size of the element list is: " + size);
+		driver.findElement(By.id("user_email")).sendKeys("test");
 	}
-
+	
 	@After
 	public void tearDown() throws Exception {
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.quit();
 	}
 }

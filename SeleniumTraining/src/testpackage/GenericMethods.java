@@ -6,6 +6,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GenericMethods {
 	WebDriver driver;
@@ -84,6 +86,36 @@ public class GenericMethods {
 			return true;
 		} else {
 			return false;
+		}
+	}
+
+	//Utility: Wait for the element to be visible
+	public WebElement waitForTheElement(By locator, int timeout){
+		WebElement element = null;
+		try{
+			System.out.println("Waiting for max:: " + timeout + " seconds for the element to be availiable.");
+			WebDriverWait wait = new WebDriverWait(driver, 3);
+			element = wait.until(
+					ExpectedConditions.visibilityOfElementLocated(locator));
+			System.out.println("The element appeared on the page");
+		} catch (Exception e) {
+			System.out.println("Element no appeared on the web page");
+		}
+		return element;
+	}
+	
+	//Utility: Wait for the element to be clickable
+	public void clickWhenReady(By locator, int timeout){
+		try{
+			WebElement element = null;
+			System.out.println("Waiting for max:: " + timeout + " seconds for the element to be clickable.");
+			WebDriverWait wait = new WebDriverWait(driver, 3);
+			element = wait.until(
+					ExpectedConditions.elementToBeClickable(locator));
+			element.click();
+			System.out.println("The element clicked on the page");
+		} catch (Exception e) {
+			System.out.println("Element no appeared on the web page");
 		}
 	}
 }
