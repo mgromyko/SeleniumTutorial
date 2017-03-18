@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="logs"/>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="lib" path="C:/Users/Slava/workspace/selenium-java-3.0.1/lib/cglib-nodep-3.2.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Slava/workspace/selenium-java-3.0.1/lib/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Slava/workspace/selenium-java-3.0.1/lib/commons-exec-1.3.jar"/>
@@ -36,5 +38,10 @@
 	<classpathentry kind="lib" path="C:/Users/Slava/workspace/selenium-java-3.0.1/lib/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Slava/workspace/selenium-java-3.0.1/client-combined-3.0.1-nodeps.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Maria/Selenium tutorial/apache-log4j-2.8.1-bin/log4j-api-2.8.1.jar"/>
+	<classpathentry kind="lib" path="D:/Maria/Selenium tutorial/apache-log4j-2.8.1-bin/log4j-core-2.8.1.jar"/>
+	<classpathentry kind="lib" path="D:/Maria/Selenium tutorial/apache-log4j-2.8.1-bin/log4j-api-2.8.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Slava/workspace/jcommander-1.64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Slava/workspace/testng-6.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

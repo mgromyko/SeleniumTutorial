@@ -1,0 +1,6 @@
+20:41:20.961 DEBUG LoggingConsole -Debug Message Logged
+20:41:20.965 ERROR LoggingConsole -Error message Logged
+20:41:20.965 FATAL LoggingConsole -Fatal message Logged
+20:42:08.361 DEBUG LoggingConsole -Debug Message Logged
+20:42:08.365 ERROR LoggingConsole -Error message Logged
+20:42:08.365 FATAL LoggingConsole -Fatal message Logged
