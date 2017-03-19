@@ -1,8 +1,13 @@
 package page.classes;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import utility.WaitTypes;
 
 public class SearchPage {
 	public static WebElement element = null;
@@ -65,6 +70,7 @@ public class SearchPage {
 	
 	public static void fillReturnDate(WebDriver driver, String retutnDate){
 		element = returnDateTextBox(driver);
+		element.clear();
 		element.sendKeys(retutnDate);
 	}
 	
@@ -96,4 +102,41 @@ public class SearchPage {
 		element = driver.findElement(By.id("tab-flight-tab-hp"));
 		element.click();
 	}
+	
+	public static WebElement advancedLink(WebDriver driver){
+		element = driver.findElement(By.id("flight-advanced-options-hp-flight"));
+		return element;
+	}
+	
+	public static void clickOnAdvancedLink(WebDriver driver) {
+		element = advancedLink(driver);
+		element.click();
+	}
+	
+	public static WebElement nonStopCheckBox(WebDriver driver){
+		element = driver.findElement(By.id("advanced-flight-nonstop-hp-flight"));
+		return element;
+	}
+
+	public static void clickOnNonStopCheckBox(WebDriver driver) {
+		element = nonStopCheckBox(driver);
+		element.click();
+	}
+	
+	public static void selectPreferredClass(WebDriver driver, int indexOfClass) {
+//		element = driver.findElement(By.id(""));
+		Select preferredClassSelectBox = new Select(driver.findElement(By.id("flight-advanced-preferred-class-hp-flight")));
+//		List<WebElement> options = preferredClassSelectBox.getOptions();
+		preferredClassSelectBox.selectByIndex(indexOfClass);
+//		element.click();
+	}
+	
+	//*[@id='outbound-departure-times']/label[2]
+	
+	public static void clickMoringFlightsCheckBox(WebDriver driver) {
+		WebElement element = WaitTypes.getWhenVisible(driver, 
+				By.xpath("//*[@id='outbound-departure-times']/label[2]"), 30);
+		element.click();
+	}
+	
 }

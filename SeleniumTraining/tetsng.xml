@@ -1,0 +1,26 @@
+<suite name="TestSuite01">
+<test name="ExpediaSearchPage" preserve-order="true">
+<!-- <classes>
+	<class name="page.classes.TestNG_Grouping">
+	</class>
+</classes>
+<groups>
+	<define name="Honda and SUV">
+		<include name="Honda" />
+		<include name="SUV" /> 
+		<include name="Sedan" />
+	</define>
+	<run>
+		<include name="Honda and SUV" />
+	</run>
+</groups> -->
+<classes>
+	<class name="page.classes.TestNG_TestSuite">
+	<methods>
+		<include name="fillBasicInfo" />
+		<include name="fillAdvancedInfo" />
+	</methods>
+	</class>
+</classes>
+</test>
+</suite>

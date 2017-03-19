@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite01]">
+  <test name="ExpediaSearchPage(failed)">
+    <groups>
+      <run>
+        <include name="Honda and SUV"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="page.classes.TestNG_TestSuite">
+        <methods>
+          <include name="fillBasicInfo"/>
+          <include name="fillAdvancedInfo"/>
+        </methods>
+      </class> <!-- page.classes.TestNG_TestSuite -->
+    </classes>
+  </test> <!-- ExpediaSearchPage(failed) -->
+</suite> <!-- Failed suite [TestSuite01] -->
